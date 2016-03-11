@@ -1,0 +1,11 @@
+My process of coming up with this solution:
+	1. I created index.php with the eatery textbox. When submitted it will go to results.php
+	2. In results.php I check to see if the post data for the eatery textbox is set, then call the search function. If
+	   the post data isn't set, the user is redirected back to index.php to add their search criteria and try again.
+	3. I created a database connection function (db_connect) that connects to my localhost (I'm running xammp on
+	   my computer at home), which is called in the search function.
+	4. Once connected to the database, I create the query that will be used to search for the results. I use place 
+	   holders for the post eatery data, since it's NEVER a good idea to trust user input.
+	6. If no results are found in the search, I display a "No results were found." message.
+	7. If results are found, I display the necessary information for that establishment.
+		  
